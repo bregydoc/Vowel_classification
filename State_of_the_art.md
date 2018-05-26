@@ -6,6 +6,7 @@
 2. Joshi Lopez 
 3. Bregy Malpartida
 
+
 ## Introducción
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel fermentum enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras enim metus, elementum id vulputate quis, vestibulum quis lorem. Quisque id est suscipit, pretium ipsum et, tempus ipsum. Duis efficitur maximus massa, eget fermentum lectus sagittis id. Quisque a lacus eget ipsum convallis rutrum. Nunc ultricies purus ut pellentesque convallis. Aliquam sed libero sit amet turpis suscipit volutpat. Sed rutrum leo lectus, vel ornare massa consequat ut. Aenean egestas eget nulla vitae pharetra. Suspendisse dignissim dolor sed pharetra semper.
@@ -197,6 +198,119 @@ El algoritmo de reconocimiento de vocales planteado es aunque sencillo, es media
 
 ### 5. A Comparative Study of Formant Frequencies Estimation Techniques  [***Dorra Gargouri***]
 
+#### ¿Que se hizo en el paper?
+
+Se presentaron dos técnicas de extracción de formantes basados en el análisis cepstral y coeficientes de predicción lineal. 
+
+#### ¿Como se realizaron los métodos?
+
+##### Estimación de formantes basada en la tecnica Cepstral
+
+Selecciona frecuencias de formantes del espectro suavizado. Esta técnica se basa en descomponer la señal del habla por deconvolución homomórfica en dos componentes: el primero presenta la excitación, mientras que el segundo presenta las resonancias del tracto vocal. El resultado llamado Cepstrum es usado para para estimar el espectro suavizado.
+
+<p align="center">
+	<img src="https://k62.kn3.net/5/4/0/5/C/4/702.png"/>
+</p>
+
+Se considera a la forma del tracto vocal como un filtro el cual es tomado  como h(t) yla excitación de las cuerdas vocales tomado como g(t), los cuales son presentados como una convolución en el dominio del tiempo.
+
+<p align="center">
+	<img src="https://k62.kn3.net/9/C/2/0/C/7/FF7.png"/>
+</p>
+
+Se realizó una FFT(Fast Fourier Transform) o transformada de Fourier para calcular el espectro de potencia, posteriormente se realizó una IFFT(Inverse Fast Fourier Transform) o Transformada rápida de Fourier del logaritmo de aquel espectro de potencia.
+
+Luego de calcular el espectro suavizado se pueden extraer amplitudes que corresponden a las resonancias del traco vocal.
+
+###### Resultados
+
+Los datos de voz usados en este estudio son de pertenencia de corpus de habla TIMIT.
+
+Se usaron 22 vocales inglesas diferentes y diptongos presentes en la base de datos anteriormente presentada (TIMIT) y solo fueron seleccionadas 6. Estas vocales fueron : [ih, ix, aa,ux, iy, y].
+
+|        <img src="https://k62.kn3.net/5/6/0/7/7/4/FC4.png"/>        |
+| :--------------------------------------------------------: |
+| Imagen 1 : Valores de la frecuencias de los formantes (Hz) |
+
+|         <img src="https://k62.kn3.net/D/3/3/B/D/1/CC2.png"/>         |
+| :----------------------------------------------------------: |
+| Imagen 2: Desviación estándard de la frecuencia de los formantes |
+
+
+
+##### Estimación de formantes basada en LPC
+
+Estima las frecuencias de los formantes del modelo a partir de los polos de la función de transferencia del tracto vocal. Este método se basa en el modelo de fuente de filtro, en el que suponen a la señal de voz como una salida de un sistema lineal.
+
+Se define a la señal de voz como:
+
+<p align="center">
+	<img src="https://k62.kn3.net/9/8/9/8/C/E/652.png"/>
+</p>
+
+
+Donde NLP y e(n) representan el numero de coeficientes de predicción lineal y el error en el modelo respectivamente. Esta ecuación se puede reescribir en notación de transformada Z como una operación de filtrado lineal:
+
+
+
+<p align="center">
+<img src="https://k62.kn3.net/8/8/A/6/A/8/547.png"/>
+</p>
+
+E(Z) y S(Z) representan la transformada Z de las señal de error y la señal de voz, HLP(Z) se define como un filtro inverso de predicción lineal.
+
+<p align="center">
+<img src="https://k62.kn3.net/E/F/3/4/1/0/CD8.png"/>
+</p>
+
+El denominador de la función de transferencia es factorizado.
+
+<p align="center">
+<img src="https://k62.kn3.net/E/2/3/6/7/1/A7B.png"/>
+</p>
+
+Donde Ck representa un conjunto de numeros complejos, con cada par de polos conjugados que representan una resonancia en frecuencia. 
+
+<p align="center">
+<img src="https://k62.kn3.net/6/A/0/F/7/A/F0B.png"/>
+</p>
+
+Y su respectivo ancho de banda:
+
+<p align="center">
+<img src="https://k62.kn3.net/C/1/4/5/C/F/5CB.png"/>
+</p>
+
+Si el polo es cercan al circulo unitario, entonces la raíz representa a un formante:
+
+
+
+<p align="center">
+<img src="https://k62.kn3.net/5/7/B/4/2/5/A08.png"/>
+</p>
+
+
+
+###### Resultados
+
+Los datos de voz usados en este estudio son de pertenencia de corpus de habla TIMIT.
+
+Se usaron 22 vocales inglesas diferentes y diptongos presentes en la base de datos anteriormente presentada (TIMIT) y solo fueron seleccionadas 6. Estas vocales fueron : [ih, ix, aa,ux, iy, y].
+
+|        <img src="https://k62.kn3.net/4/7/F/5/2/4/DDF.png"/>        |
+| :--------------------------------------------------------: |
+| Imagen 3 : Valores de la frecuencias de los formantes (Hz) |
+
+|         <img src="https://k62.kn3.net/1/8/F/8/4/5/876.png"/>         |
+| :----------------------------------------------------------: |
+| Imagen 4: Desviación estándard de la frecuencia de los formantes |
+
+
+
+#### Conclusiones
+
+Se corroboró mediante el método estadístico de desviacón estándar que a pesar de que ambos métodos son eficientes el que menos errores tiene es la técnica basada en LPC para la estimacion de la frecuencia de los formantes.
+
 ### 6. Malayalam Vowel Recognition Based On Linear Predictive Coding Parameters and k-NN Algorithm [***T. M. Thasleema***]
 
 #### ¿Que se hizo en el paper?
@@ -241,11 +355,8 @@ La clasificación por k vecinos más cercanos se da gracias a la proximidad de u
 
 La precisión del reconocimiento usando la extraccion de parametros por LPC según los resultados del paper es de 94%, aunque la clasificación por k vecinos mas cercanos da una mejora en la precision del reconocimiento,el costo computacional  es mayor comparado con otros metodos de clasificacion
 
-### On the performance of the quefrency-weighted cepstral coefficients in vowel recognition [***K.K. PALIWAL***]
 
 
 
-
-
-## Conclusiones
+## Conclusiones generales
 
