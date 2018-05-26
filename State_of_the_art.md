@@ -129,19 +129,27 @@ Kundur propusó el siguiente diagrama de bloques en la Figura#
 
 Entra al sistema una señal (la voz en este caso) y es discretizada, es decir, inicialmente la señal de voz entra al sistema como una señal en dominio de tiempo, la cual posteriormente es transforomada a dominio de muestras.
 
-![](https://k62.kn3.net/8/D/F/7/B/2/9AA.png)
+<p align="center">
+	<img src="https://k62.kn3.net/8/D/F/7/B/2/9AA.png"/>
+</p>
 
 Se presenta una convolución en tiempo discreto, la cual tambien se puede analizar como un producto en el dominio de la frecuencia. Al aplicarle una FFT(Fast Fourier Transform) o transformada rápida de Fourier, obtemos:
 
-![](https://k62.kn3.net/3/4/5/8/7/B/973.png)
+<p align="center">
+	<img src="https://k62.kn3.net/3/4/5/8/7/B/973.png"/>
+</p>
 
 Se aplica un artificio matemático que consiste en separar ambas funciones multiplicadas y tomarlas como logaritmos de sus magnitudes para poder obtener:
 
-![](https://k62.kn3.net/6/4/D/1/E/C/054.png)
+<p align="center">
+	<img src="https://k62.kn3.net/6/4/D/1/E/C/054.png"/>
+</p>
 
 Finalmente se aplica una IFFT(Inverse Fast Fourier Transform) o transformada rápida inversa de Fourier en el dominio cepstral.
 
- 				![](https://k62.kn3.net/F/E/1/7/D/A/E94.png)
+<p align="center">
+	<img src="https://k62.kn3.net/F/E/1/7/D/A/E94.png"/>
+</p>
 
 Como resultado de esta transformada inversa se tiene la variable independiente “quefrency” la cual tiene como unidad de trabajo el tiempo.
 
