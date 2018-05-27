@@ -319,41 +319,41 @@ Se utiliza un modelo de codificación predictiva lineal para el reconocimiento d
 
 #### ¿Como se realizo el reconocimiento basado en LPC y k vecinos más cercanos?
 
-En aplicaciones del habla, la principal ventaja usualmente se atribuye a las caracteristicas de todos los polos del espectro de la vocal.En comparacion con otras tecnicas de modelo espectral no parámetrico,LPC es mejor comprimiendo la informacion del espectro en pocos coeficientes de filtro que pueden ser cuantificados de manera eficiente.
+En aplicaciones del habla, la principal ventaja usualmente se atribuye a las características de todos los polos del espectro de la vocal.En comparación con otras tecnicas de modelo espectral no parámetrico,LPC es mejor comprimiendo la información del espectro en pocos coeficientes de filtro que pueden ser cuantificados de manera eficiente.
 
-Dado que las señales de habla solo son estables en un periodo pequeño, LPC es un metodo de estimacion de pocos terminos.El metodo LPC considera una muestra de habla en tiempo n, s(n) y la aproxima con una combinación linear de p muestras pasadas de la siguiente forma:
+Dado que las señales de habla solo son estables en un periodo pequeño, LPC es un método de estimación de pocos términos.El método LPC considera una muestra de habla en tiempo n, s(n) y la aproxima con una combinación linear de p muestras pasadas de la siguiente forma:
 
 <p align="center">
 <img src="https://k62.kn3.net/E/0/C/D/C/C/5F1.png"/ style="width: 350px ;heigth: auto; "\>
 </p>
 
-donde los coeficientes a~1~ , a~2~, ............. a ~p~ se asumen constantes en el marco de analisis de voz.
+donde los coeficientes a~1~ , a~2~, ............. a ~p~ se asumen constantes en el marco de análisis de voz.
 
-A la primera expresión se le incluye  un termino de exitación Gu(n)
+A la primera expresión se le incluye  un término de excitación Gu(n)
 
 <p align="center">
 <img src="https://k62.kn3.net/B/6/9/E/C/7/6D5.png"/ style="width: 210px ;heigth: auto; "\>
 </p>
 
-donde u(n) es una excitación normalizada y G es la ganancia de esta.Al expresar  en el dominio z se obtiene la relacion:
+donde u(n) es una excitación normalizada y G es la ganancia de esta.Al expresar  en el dominio z se obtiene la relación:
 
 <p align="center">
 <img src="https://k62.kn3.net/3/2/D/8/C/3/C79.png"/ style="width: 210px ;heigth: auto; "\>
 </p>
 
-En consecuencia, la funcion de transferencia H(z) es:
+En consecuencia, la función de transferencia H(z) es:
 
 <p align="center">
 <img src="https://k62.kn3.net/E/E/9/1/9/6/21E.png"/ style="width: 280px ;heigth: auto; "\>
 </p>
 
-Los parametros principales que se pueden obtener del modelo LPC es la clasificación de hablado/no hablado, el periodo de habla, la ganancia y los coeficientes a~i~ ,se debe tener en cuenta de que a mayor el orden del modelo, el modelo de polos representara los sonidos hablados de mejor manera.
+Los parámetros principales que se pueden obtener del modelo LPC es la clasificación de hablado/no hablado, el período de habla, la ganancia y los coeficientes a~i~ ,se debe tener en cuenta de que a mayor el orden del modelo, el modelo de polos representara los sonidos hablados de mejor manera.
 
-La clasificación por k vecinos más cercanos se da gracias a la proximidad de un patron desconocido a un patron determinado por una clase.Una clase puede ser caracterizada por uno o mas patrones.El metodo de k vecinos más cercanos es una clasificación no parametrica, donde la probabilidad es estimada por la frecuencia  de vecinos más cercanos a el patron desconocido.La clasificación por k vecinos más cercanos se  basa en los parametros obtenidos en el modelo LPC.
+La clasificación por k vecinos más cercanos se da gracias a la proximidad de un patron desconocido a un patron determinado por una clase.Una clase puede ser caracterizada por uno o mas patrones.El metodo de k vecinos más cercanos es una clasificación no paramétrica, donde la probabilidad es estimada por la frecuencia  de vecinos más cercanos a el patron desconocido.La clasificación por k vecinos más cercanos se  basa en los parametros obtenidos en el modelo LPC.
 
 #### Conclusiones
 
-La precisión del reconocimiento usando la extraccion de parametros por LPC según los resultados del paper es de 94%, aunque la clasificación por k vecinos mas cercanos da una mejora en la precision del reconocimiento,el costo computacional  es mayor comparado con otros metodos de clasificacion
+La precisión del reconocimiento usando la extraccion de parametros por LPC según los resultados del paper es de 94%, aunque la clasificación por k vecinos mas cercanos da una mejora en la precision del reconocimiento,el costo computacional  es mayor comparado con otros métodos de clasificación
 
 
 
