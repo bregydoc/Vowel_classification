@@ -351,3 +351,15 @@ La clasificación por k vecinos más cercanos se da gracias a la proximidad de u
 La precisión del reconocimiento usando la extraccion de parametros por LPC según los resultados del paper es de 94%, aunque la clasificación por k vecinos mas cercanos da una mejora en la precision del reconocimiento,el costo computacional  es mayor comparado con otros metodos de clasificacion
 
 
+
+## Referencias
+
+B.Shinde, R., & P. Pawar, V. (2012). **Vowel Classification based on LPC and ANN**. *International Journal Of Computer Applications*, *50*(6), 27-31. doi: [10.5120/7777-0862](http://sci-hub.tw/10.5120/7777-0862)
+
+Gargouri, D., Ali Kammoun, M., & Ben Hamida, A. (2006). **A Comparative Study of Formant Frequencies Estimation Techniques**. *Citeseerx*. doi: 10.1.1.148.4905
+
+Kundur, D. **Cepstral Analysis** [Ebook]. Toronto University. Retrieved from http://www.comm.utoronto.ca/~dkundur/course_info/discrete-time-systems/project/Kundur_DTS_Cepstral_Analysis.pdf
+
+Stanek, M., & Polak, L. (2013). **Algorithms for vowel recognition in fluent speech based on formant position**s. *2013 36Th International Conference On Telecommunications And Signal Processing (TSP)*. doi: [10.1109/tsp.2013.6613987](http://sci-hub.tw/10.1109/tsp.2013.6613987)
+
+Thasleema, T., Kabeer, V., & Narayanan, N. (2007). **Malayalam Vowel Recognition Based on Linear Predictive Coding Parameters and k-NN Algorithm**. *International Conference On Computational Intelligence And Multimedia Applications (ICCIMA 2007)*. doi: [10.1109/iccima.2007.372](http://sci-hub.tw/10.1109/iccima.2007.372)
