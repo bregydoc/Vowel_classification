@@ -304,7 +304,7 @@ Se usaron 22 vocales inglesas diferentes y diptongos presentes en la base de dat
 
 #### Conclusiones
 
-Se corroboró mediante el método estadístico de desviacón estándar que a pesar de que ambos métodos son eficientes el que menos errores tiene es la técnica basada en LPC para la estimacion de la frecuencia de los formantes.
+Se corroboró mediante el método estadístico de desviación estándar que a pesar de que ambos métodos son eficientes el que menos errores tiene es la técnica basada en LPC para la estimacion de la frecuencia de los formantes.
 
 ### 6. Malayalam Vowel Recognition Based On Linear Predictive Coding Parameters and k-NN Algorithm [***T. M. Thasleema***]
 
