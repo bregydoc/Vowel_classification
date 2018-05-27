@@ -115,11 +115,11 @@ Se expuso y explicó los conceptos de análisis Cepstral y deconvolución.
 
 #### ¿Como se realizo…?
 
-Kundur propusó el siguiente diagrama de bloques en la Figura#
+Kundur propusó el siguiente diagrama de bloques en la Figura 6.
 
 | ![](https://k62.kn3.net/B/A/8/5/D/7/181.png) |
 | :------------------------------------------: |
-|                  Figura 1.                   |
+|        Figura 6. Diagrama de bloques.        |
 
 
 
@@ -167,12 +167,12 @@ El algoritmo de Stanek reconoce las frecuencias de las dos formantes principales
 
 #### ¿Como se realizó el reconocimiento de las formantes?
 
-Stanek propone el siguiente diagrama de bloques en la Figura 1:
+Stanek propone el siguiente diagrama de bloques en la Figura 7:
 
 
 | <img src="https://k62.kn3.net/A/3/6/5/7/9/C6F.png" style="width: 300px ;heigth: auto;"/> |
 | :----------------------------------------------------------: |
-|                        Figura 1. ...                         |
+| Figura 7.  Diagrama de bloques del algoritmo usado por Stanek. |
 
 
 Se empieza con la entrada de la señal del habla, la cual es muestreada a 8kHz y normalizando su amplitud.Luego se procede a segmentarse usando ventanas de Hamming; en bloques de 20 ms sin sobreposicionamiento.
@@ -223,13 +223,13 @@ Los datos de voz usados en este estudio son de pertenencia de corpus de habla TI
 
 Se usaron 22 vocales inglesas diferentes y diptongos presentes en la base de datos anteriormente presentada (TIMIT) y solo fueron seleccionadas 6. Estas vocales fueron : [ih, ix, aa,ux, iy, y].
 
-|        <img src="https://k62.kn3.net/5/6/0/7/7/4/FC4.png"/>        |
-| :--------------------------------------------------------: |
-| Imagen 1 : Valores de la frecuencias de los formantes (Hz) |
+|   <img src="https://k62.kn3.net/5/6/0/7/7/4/FC4.png"/>    |
+| :-------------------------------------------------------: |
+| Figura 8: Valores de la frecuencias de los formantes (Hz) |
 
-|         <img src="https://k62.kn3.net/D/3/3/B/D/1/CC2.png"/>         |
+|     <img src="https://k62.kn3.net/D/3/3/B/D/1/CC2.png"/>     |
 | :----------------------------------------------------------: |
-| Imagen 2: Desviación estándard de la frecuencia de los formantes |
+| Figura 9: Desviación estándard de la frecuencia de los formantes |
 
 
 
@@ -292,13 +292,13 @@ Los datos de voz usados en este estudio son de pertenencia de corpus de habla TI
 
 Se usaron 22 vocales inglesas diferentes y diptongos presentes en la base de datos anteriormente presentada (TIMIT) y solo fueron seleccionadas 6. Estas vocales fueron : [ih, ix, aa,ux, iy, y].
 
-|        <img src="https://k62.kn3.net/4/7/F/5/2/4/DDF.png"/>        |
+|    <img src="https://k62.kn3.net/4/7/F/5/2/4/DDF.png"/>    |
 | :--------------------------------------------------------: |
-| Imagen 3 : Valores de la frecuencias de los formantes (Hz) |
+| Figura 10. Valores de la frecuencias de los formantes (Hz) |
 
-|         <img src="https://k62.kn3.net/1/8/F/8/4/5/876.png"/>         |
+|     <img src="https://k62.kn3.net/1/8/F/8/4/5/876.png"/>     |
 | :----------------------------------------------------------: |
-| Imagen 4: Desviación estándard de la frecuencia de los formantes |
+| Figura 11. Desviación estándard de la frecuencia de los formantes |
 
 
 
