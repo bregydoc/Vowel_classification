@@ -9,7 +9,7 @@
 
 ## Introducción
 
-El reconocimiento de lenguage natural es un campo bastante estudiado actualmente, es en este tópico de estudio que se encuentra el reconocimiento de leguage hablado. El reconocimiento de lenguaje hablado es la capacidad de reconocer, procesar y entender el lenguaje hablado, esto se logra usando una multitud de algoritmos cada vez más complejos y especializados para este campo. Nosotros trataremos de emular una sencilla tarea particular de este campo: el reconocimiento de sonidos vocalicos (A, E, I, O y U) en español; para lograrlo, y como primer acercamiento al tema realizaremos un minusioso estudio del actual estado del arte y las diferentes orientación que se han llevado a cabo para atacar este problema. A continuación pasaremos a detallar algunos estudios realizados para dar solución al ya mencionado tópico.
+El reconocimiento de lenguaje natural es un campo bastante estudiado actualmente, es en este tópico de estudio que se encuentra el reconocimiento de lenguaje hablado. El reconocimiento de lenguaje hablado es la capacidad de reconocer, procesar y entender el lenguaje hablado, esto se logra usando una multitud de algoritmos cada vez más complejos y especializados para este campo. Nosotros trataremos de emular una sencilla tarea particular de este campo: el reconocimiento de sonidos vocálicos (A, E, I, O y U) en español; para lograrlo, y como primer acercamiento al tema realizaremos un minucioso estudio del actual estado del arte y las diferentes orientación que se han llevado a cabo para atacar este problema. A continuación pasaremos a detallar algunos estudios realizados para dar solución al ya mencionado tópico.
 
 
 ## Objetivos
@@ -22,11 +22,11 @@ El reconocimiento de lenguage natural es un campo bastante estudiado actualmente
 
 ### 1. Vowel Classification based on LPC and ANN [***R. B. Shinde***]
 
-#### ¿Que se hizo en el paper?
+#### ¿Qué se hizo en el paper?
 
 Intentaron clasificar el sonido de vocales en ingles usando métodos basados en Coeficientes de Predicción Linear (Linear Prediction Coefficient) y Redes Neuronales Artificiales. Usando estos métodos llegaron a un 98.7% de eficiencia.
 
-#### ¿Como se realizó la clasificación?
+#### ¿Cómo se realizó la clasificación?
 
 Primero generaron una base de datos de vocales en ingles con 5 personas y 5 muestras por vocal por persona ('A', 'E', 'I', 'O' y 'U'). Con la base de datos ya lista, construyeron un VCS (Vowel Classification System), en la figura 1 se detalla la forma en que se organiza este sistema.
 
@@ -110,11 +110,11 @@ Consiguieron un modelo predictivo bastante preciso, lograron un 91.5% de "accura
 
 ### 2. Cepstral Analysis [***Deepa Kundur***]
 
-#### ¿Que se hizo en el paper?
+#### ¿Qué se hizo en el paper?
 
 Se expuso y explicó los conceptos de análisis Cepstral y deconvolución.
 
-#### ¿Como se realizo…?
+#### ¿Cómo se realizó?
 
 Kundur propusó el siguiente diagrama de bloques en la Figura#
 
@@ -160,13 +160,13 @@ Al ser un paper guía deja algunas variables al aire, es decir, nos sugieren tom
 
 ### 3. Algorithms for Vowel Recognition in Fluent Speech Based on Formant Positions [***Miroslav Stanek***]
 
-#### ¿Que se hizo en el paper?
+#### ¿Qué se hizo en el paper?
 
  Un formante es una concentración de energía acústica alrededor de una frecuencia particular en la señal del habla.
 
 El algoritmo de Stanek reconoce las frecuencias de las dos formantes principales, las cuales determinan una vocal.  
 
-#### ¿Como se realizó el reconocimiento de las formantes?
+#### ¿Cómo se realizó el reconocimiento de las formantes?
 
 Stanek propone el siguiente diagrama de bloques en la Figura 1:
 
@@ -194,11 +194,11 @@ El algoritmo de reconocimiento de vocales planteado es aunque sencillo, es media
 
 ### 5. A Comparative Study of Formant Frequencies Estimation Techniques  [***Dorra Gargouri***]
 
-#### ¿Que se hizo en el paper?
+#### ¿Qué se hizo en el paper?
 
 Se presentaron dos técnicas de extracción de formantes basados en el análisis cepstral y coeficientes de predicción lineal. 
 
-#### ¿Como se realizaron los métodos?
+#### ¿Cómo se realizaron los métodos?
 
 ##### Estimación de formantes basada en la tecnica Cepstral
 
@@ -309,11 +309,11 @@ Se corroboró mediante el método estadístico de desviacón estándar que a pes
 
 ### 6. Malayalam Vowel Recognition Based On Linear Predictive Coding Parameters and k-NN Algorithm [***T. M. Thasleema***]
 
-#### ¿Que se hizo en el paper?
+#### ¿Qué se hizo en el paper?
 
 Se utiliza un modelo de codificación predictiva lineal para el reconocimiento de vocales,luego utiliza             k-vecino más cercanos para clasificar la señal de habla en clases.
 
-#### ¿Como se realizo el reconocimiento basado en LPC y k vecinos más cercanos?
+#### ¿Cómo se realizo el reconocimiento basado en LPC y k vecinos más cercanos?
 
 En aplicaciones del habla, la principal ventaja usualmente se atribuye a las caracteristicas de todos los polos del espectro de la vocal.En comparacion con otras tecnicas de modelo espectral no parámetrico,LPC es mejor comprimiendo la informacion del espectro en pocos coeficientes de filtro que pueden ser cuantificados de manera eficiente.
 
@@ -345,7 +345,7 @@ En consecuencia, la funcion de transferencia H(z) es:
 
 Los parametros principales que se pueden obtener del modelo LPC es la clasificación de hablado/no hablado, el periodo de habla, la ganancia y los coeficientes a~i~ ,se debe tener en cuenta de que a mayor el orden del modelo, el modelo de polos representara los sonidos hablados de mejor manera.
 
-La clasificación por k vecinos más cercanos se da gracias a la proximidad de un patron desconocido a un patron determinado por una clase.Una clase puede ser caracterizada por uno o mas patrones.El metodo de k vecinos más cercanos es una clasificación no parametrica, donde la probabilidad es estimada por la frecuencia  de vecinos más cercanos a el patron desconocido.La clasificación por k vecinos más cercanos se  basa en los parametros obtenidos en el modelo LPC.
+La clasificación por k vecinos más cercanos se da gracias a la proximidad de un patrón desconocido a un patrón determinado por una clase.Una clase puede ser caracterizada por uno o mas patrones.El método de k vecinos más cercanos es una clasificación no perimétricas, donde la probabilidad es estimada por la frecuencia  de vecinos más cercanos a el patrón desconocido.La clasificación por k vecinos más cercanos se  basa en los parametros obtenidos en el modelo LPC.
 
 #### Conclusiones
 
