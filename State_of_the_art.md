@@ -22,11 +22,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel fermentum
 
 ### 1. Vowel Classification based on LPC and ANN [***R. B. Shinde***]
 
-#### ¿Que se hizo en el paper?
+#### ¿Qué se hizo en el paper?
 
 Intentaron clasificar el sonido de vocales en ingles usando métodos basados en Coeficientes de Predicción Linear (Linear Prediction Coefficient) y Redes Neuronales Artificiales. Usando estos métodos llegaron a un 98.7% de eficiencia.
 
-#### ¿Como se realizó la clasificación?
+#### ¿Cómo se realizó la clasificación?
 
 Primero generaron una base de datos de vocales en ingles con 5 personas y 5 muestras por vocal por persona ('A', 'E', 'I', 'O' y 'U'). Con la base de datos ya lista, construyeron un VCS (Vowel Classification System), en la figura 1 se detalla la forma en que se organiza este sistema.
 
@@ -164,13 +164,13 @@ Al ser un paper guía deja algunas variables al aire, es decir, nos sugieren tom
 
 ### 3. Algorithms for Vowel Recognition in Fluent Speech Based on Formant Positions [***Miroslav Stanek***]
 
-#### ¿Que se hizo en el paper?
+#### ¿Qué se hizo en el paper?
 
  Un formante es una concentración de energía acústica alrededor de una frecuencia particular en la señal del habla.
 
 El algoritmo de Stanek reconoce las frecuencias de las dos formantes principales, las cuales determinan una vocal.  
 
-#### ¿Como se realizó el reconocimiento de las formantes?
+#### ¿Cómo se realizó el reconocimiento de las formantes?
 
 Stanek propone el siguiente diagrama de bloques en la Figura 1:
 
@@ -198,11 +198,11 @@ El algoritmo de reconocimiento de vocales planteado es aunque sencillo, es media
 
 ### 5. A Comparative Study of Formant Frequencies Estimation Techniques  [***Dorra Gargouri***]
 
-#### ¿Que se hizo en el paper?
+#### ¿Qué se hizo en el paper?
 
 Se presentaron dos técnicas de extracción de formantes basados en el análisis cepstral y coeficientes de predicción lineal. 
 
-#### ¿Como se realizaron los métodos?
+#### ¿Cómo se realizaron los métodos?
 
 ##### Estimación de formantes basada en la tecnica Cepstral
 
@@ -313,11 +313,11 @@ Se corroboró mediante el método estadístico de desviacón estándar que a pes
 
 ### 6. Malayalam Vowel Recognition Based On Linear Predictive Coding Parameters and k-NN Algorithm [***T. M. Thasleema***]
 
-#### ¿Que se hizo en el paper?
+#### ¿Qué se hizo en el paper?
 
 Se utiliza un modelo de codificación predictiva lineal para el reconocimiento de vocales,luego utiliza             k-vecino más cercanos para clasificar la señal de habla en clases.
 
-#### ¿Como se realizo el reconocimiento basado en LPC y k vecinos más cercanos?
+#### ¿Cómo se realizo el reconocimiento basado en LPC y k vecinos más cercanos?
 
 En aplicaciones del habla, la principal ventaja usualmente se atribuye a las características de todos los polos del espectro de la vocal.En comparación con otras tecnicas de modelo espectral no parámetrico,LPC es mejor comprimiendo la información del espectro en pocos coeficientes de filtro que pueden ser cuantificados de manera eficiente.
 
